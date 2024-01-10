@@ -1,13 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    성공했어!
-    
-    
-</body>
+    <style>
+      input {
+        width: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>구글로그인 성공!</h2>
+    <form action="https://oauth2.googleapis.com/token" method="POST" enctype="application/x-www-form-urlencoded">
+        code : <input name="code" value = <%= query.code %>><br>
+        client_id : <input name="client_id" value = <%= client_id %>><br>
+        client_secret : <input name="client_secret" value = <%= client_secret%>><br>
+        redirect_uri : <input name="redirect_uri" value = "http://localhost:3000/complete"><br>
+        grant_type : <input name="grant_type" value = "authorization_code"><br>
+      <input type="submit">make token request</button>
+    </form>
+    <p>your token request uri<br /></p>
+  </body>
 </html>
+

@@ -1,0 +1,1 @@
+const curlCommand = 'https://www.googleapis.com/oauth2/v2/userinfo/?access_token=ya29.a0AfB_byBNNZlvQg6SN-X5lGJG_ZmOuocf1HQLtDASJ_cGdynXua-1cFigRQ84FQuaVsib8sXljU4LposYQq2pDAjN4YCj7YEmIRQB5brsOv-xeejWh71b1rD4RMvPn_mvf4PyHrDjoCfmgN1uA81L9f2mLpk1uf_Lh37kaCgYKAdMSARMSFQHGX2Miu9aKa3PIvnktXXYJ8fIKgg0171'
