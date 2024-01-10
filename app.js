@@ -6,7 +6,7 @@ app.set("view engine", "ejs");
 app.set(express.urlencoded({ extended: false }));
 
 app.use("/", function (req, res) {
-  res.render("main");
+  return res.render("main");
 });
 
 app.listen(3000);
