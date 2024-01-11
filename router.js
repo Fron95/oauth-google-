@@ -5,8 +5,10 @@ const controllers = require('./controller')
 router.get("/", controllers.requireAuth)
 
 router.get("/complete", controllers.getToken)
-router.get("/tokenComplete", function(req, res) {
-    return res.render('tokenComplete')
+router.get("/ultimate", function(req, res) {
+    console.log("req.query.data",req.query.data)
+    const data = JSON.parse(req.query.data)
+    res.render('ultimate', {userInfo : data})
 })
 
 router.post('/api', controllers.postApi)
