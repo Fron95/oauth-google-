@@ -3,24 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="getToken.js" defer></script>
     <title>Document</title>
     <style>
-      input {
+      form {
         width: 50%;
+      }
+      div {
+        width: 100%;
       }
     </style>
   </head>
   <body>
     <h2>구글로그인 성공!</h2>
-    <form action="https://oauth2.googleapis.com/token" method="POST" enctype="application/x-www-form-urlencoded">
-        code : <input name="code" value = <%= query.code %>><br>
-        client_id : <input name="client_id" value = <%= client_id %>><br>
-        client_secret : <input name="client_secret" value = <%= client_secret%>><br>
-        redirect_uri : <input name="redirect_uri" value = "http://localhost:3000/complete"><br>
-        grant_type : <input name="grant_type" value = "authorization_code"><br>
-      <input type="submit">make token request</button>
-    </form>
-    <p>your token request uri<br /></p>
+    <form id="myform" action="https://oauth2.googleapis.com/token" method="POST" enctype="application/x-www-form-urlencoded">
+        <div>code : <input name="code" value = <%= query.code %>><br></div>
+        <div>client_id : <input name="client_id" value = <%= client_id %>><br></div>
+        <div>client_secret : <input name="client_secret" value = <%= client_secret%>><br></div>
+        <div>redirect_uri : <input name="redirect_uri" value = "http://localhost:3000/complete"><br></div>
+        <div>grant_type : <input name="grant_type" value = "authorization_code"><br></div>
+      <input type="submit" value="토큰받기">
+    </form>    
   </body>
 </html>
 

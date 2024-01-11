@@ -3,6 +3,7 @@ const CLIENT_SECRET = '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'
 const SCOPE = 'https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.email'
 const REDIRECT_URI = 'http://localhost:3000/complete'
 
+
 const auth_uri = `https://accounts.google.com/o/oauth2/v2/auth?
 scope=${SCOPE}&
 access_type=online&
@@ -19,6 +20,7 @@ function requireAuth(req, res) {
 }
 
 function getToken(req, res){
+    console.log(req.body)
     return res.render("complete",{query : req.query,client_id : CLIENT_ID, client_secret : CLIENT_SECRET });
 }
 
