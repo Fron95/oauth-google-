@@ -9,4 +9,6 @@ router.get("/tokenComplete", function(req, res) {
     return res.render('tokenComplete')
 })
 
+router.post('/api', controllers.postApi)
+
 module.exports = router

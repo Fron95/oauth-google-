@@ -16,7 +16,7 @@
   </head>
   <body>
     <h2>구글로그인 성공!</h2>
-    <form id="myform" action="https://oauth2.googleapis.com/token" method="POST" enctype="application/x-www-form-urlencoded">
+    <form id="myform" action="/api" method="POST" enctype="application/x-www-form-urlencoded">
         <div>code : <input name="code" value = <%= query.code %>><br></div>
         <div>client_id : <input name="client_id" value = <%= client_id %>><br></div>
         <div>client_secret : <input name="client_secret" value = <%= client_secret%>><br></div>
